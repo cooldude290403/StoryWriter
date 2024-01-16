@@ -1,0 +1,34 @@
+import tkinter as  tk
+
+#This function will print the final report when the user clicks genirate
+def show_sel():
+    selected_services = []
+    #This is a loop that continues intil it has gone over every item in the list
+    for service in services:
+        #Checks if each box is ticked or not. returns a true or false
+        if service_vars[service].get():
+            selected_services.append(service)
+    print("Selected Services: ", selected_services)  
+
+#This funtion reads the list of services from the file "servicelist"
+def read_services(file_path):
+    with open(file_path, 'r') as file:
+        return [line.strip() for line in file]
+
+#This makes the main window and titles it
+root = tk.Tk()
+root.title("Service Report Generator")
+
+#reads from text file to get the list of service items
+services = read_services("servicelist")
+#Makes the true or false values thingy
+service_vars = {service: tk.BooleanVar() for service in services}
+
+#This is the code that makes all the tick boxes
+for service in services:
+    tk.Checkbutton(root, text=service, variable=service_vars[service]).pack()
+
+submit_button =tk.Button(root, text="Generate Report", command=show_sel)
+submit_button.pack()
+
+root.mainloop()
