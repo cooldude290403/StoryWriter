@@ -15,10 +15,23 @@ def show_sel():
 def read_services_from_json(file_path):
     with open(file_path, 'r') as file:
         return json.load(file)
-
+    
+# This function displays the menu that the user picks make and model from
+#def select_make_and_model():
+    
 # This makes the main window and titles it
 root = tk.Tk()
 root.title("Service Report Generator")
+
+# Pulls make and model data
+make_model_data = read_services_from_json("brands")
+make_model = list(make_model_data.keys())
+
+make_model_var = {make: tk.BooleanVar() for make in make_model}
+
+# Makes the tick boxes for make selection
+for make in make_model:
+    tk.Checkbutton(root, text=make, variable=make_model_var[make]).pack()
 
 # Read services from a JSON file
 services_data = read_services_from_json("services")

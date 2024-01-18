@@ -1,0 +1,22 @@
+{
+    "Fuso": {
+        "models": [
+            "canter",
+            "Fighter",
+            "Heavy",
+            "Shogun"
+        ]
+    },
+
+    "Mercedes benz": {
+        "models": [
+            "Actros"
+        ]
+    },
+    "freightliner": {
+        "models": [
+            "place holder"
+        ]
+    }
+
+}
