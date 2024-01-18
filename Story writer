@@ -1,34 +1,37 @@
 import tkinter as  tk
+import json
 
-#This function will print the final report when the user clicks genirate
+# This function will print the final report when the user clicks genirate
 def show_sel():
     selected_services = []
-    #This is a loop that continues intil it has gone over every item in the list
-    for service in services:
+    for service, var in service_vars.items():
         #Checks if each box is ticked or not. returns a true or false
-        if service_vars[service].get():
-            selected_services.append(service)
-    print("Selected Services: ", selected_services)  
+        if var.get():
+            details = "\n".join(services_data[service]["details"])
+            selected_services.append(f"{service}:\n{details}")
+    print("Selected Services: \n" + "\n\n".join(selected_services))  
 
-#This funtion reads the list of services from the file "servicelist"
-def read_services(file_path):
+# This funtion now reads the sevice names and service details from a single json file
+def read_services_from_json(file_path):
     with open(file_path, 'r') as file:
-        return [line.strip() for line in file]
+        return json.load(file)
 
-#This makes the main window and titles it
+# This makes the main window and titles it
 root = tk.Tk()
 root.title("Service Report Generator")
 
-#reads from text file to get the list of service items
-services = read_services("servicelist")
-#Makes the true or false values thingy
+# Read services from a JSON file
+services_data = read_services_from_json("services")
+services = list(services_data.keys())
+
+# Dictionary to hold BooleanVars for each service
 service_vars = {service: tk.BooleanVar() for service in services}
 
-#This is the code that makes all the tick boxes
+# This is the code that makes all the tick boxes
 for service in services:
     tk.Checkbutton(root, text=service, variable=service_vars[service]).pack()
 
-submit_button =tk.Button(root, text="Generate Report", command=show_sel)
+submit_button = tk.Button(root, text="Generate Report", command=show_sel)
 submit_button.pack()
 
 root.mainloop()

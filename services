@@ -1,0 +1,29 @@
+{
+    "Engine Service": {
+        "details": [
+            "Drained engine oil",
+            "Changed sump plug washer and refitted sump plug",
+            "Changed oil filter",
+            "Filled engine with 13.7L of 10w-30",
+            "Changed fuel filter",
+            "Primed fuel sytem",
+            "Changed PCV filter"
+        ]    
+    },
+    "Transmisson Service": {
+        "details": [
+            "Removed fill plug",
+            "Removed drain plug and drained oil",
+            "Changed drain plug washer and reinstalled",
+            "Filled transmisson with 8L(Check this) of MP80",
+            "Changed fill plug washer and reinstalled"
+        ]
+    },
+    "Wheel Bearings": {
+        "details": [
+            "Did the stuff for wheeling bearings",
+            "Did even more stuff for wheel bearings",
+            "Place holder"
+        ]
+    }
+}
