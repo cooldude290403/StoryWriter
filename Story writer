@@ -1,17 +1,35 @@
 import tkinter as  tk
+from tkinter import messagebox
 import json
 
 # This function will print the final report when the user clicks genirate
 def show_sel():
+    # This function is only used in this function only. Its use is to allow the user to copy the story to clipboard to aid in transferring
+    def copy_text():
+        root.clipboard_clear()
+        root.clipboard_append(story_output)
+        messagebox.showinfo("Info", "Story has been copied to clipboard")
+
     selected_services = []
     for service, var in service_vars.items():
-        #Checks if each box is ticked or not. returns a true or false
+#Checks if each box is ticked or not. returns a true or false
         if var.get():
             details = "\n".join(services_data[service]["details"])
             selected_services.append(f"{service}:\n{details}")
-    print("Selected Services: \n" + "\n\n".join(selected_services))  
+    story_output = "Selected Services: \n\n" + "\n\n".join(selected_services)
+    window_delete()
+    output = tk.Label(root, text=story_output)
+    output.pack()
+    copy_button = tk.Button(root, text="copy", command=copy_text)
+    copy_button.pack()
 
-# This funtion now reads the sevice names and service details from a single json file
+    
+# This function clears everything in the root window - unsure if this needs to be its own function or if it should just be included in where ever its needed
+def window_delete():
+    for widget in root.winfo_children():
+        widget.destroy()
+
+# This function now reads the sevice names and service details from a single json file
 def read_services_from_json(file_path):
     with open(file_path, 'r') as file:
         return json.load(file)
