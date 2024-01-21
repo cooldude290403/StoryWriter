@@ -20,7 +20,7 @@ def show_sel():
     window_delete()
     output = tk.Label(root, text=story_output)
     output.pack()
-    copy_button = tk.Button(root, text="copy", command=copy_text)
+    copy_button = tk.Button(root, text="Copy", command=copy_text)
     copy_button.pack()
 
     
@@ -34,6 +34,8 @@ def read_services_from_json(file_path):
     with open(file_path, 'r') as file:
         return json.load(file)
     
+# END OF  MULTI USE FUMCTIONS ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    
 # This function displays the menu that the user picks make and model from
 #def select_make_and_model():
     
@@ -41,28 +43,49 @@ def read_services_from_json(file_path):
 root = tk.Tk()
 root.title("Service Report Generator")
 
-# Pulls make and model data
-make_model_data = read_services_from_json("brands")
-make_model = list(make_model_data.keys())
+# Pulls make and model data, makes the variables for the tick boxes and creates the tickboxes themselves
+def select_make():
+    make_data = read_services_from_json("brands")
+    makes = list(make_data.keys())
+    make_var = {make: tk.BooleanVar() for make in makes}
+    selected_make = tk.StringVar()
+    value = 0
+    for make in makes:
+        tk.Radiobutton(root, text=make, variable=selected_make, value=make).pack()
+        value = value + 1
 
-make_model_var = {make: tk.BooleanVar() for make in make_model}
+    # Create the forward button and pack it on the right side
+    forward_button = tk.Button(root, text="Next", command=lambda: process_selection(selected_make.get(), "select_model"))
+    forward_button.pack(side=tk.RIGHT)
 
-# Makes the tick boxes for make selection
-for make in make_model:
-    tk.Checkbutton(root, text=make, variable=make_model_var[make]).pack()
+    # Create the back button and pack it on the left side
+    back_button = tk.Button(root, text="Back")
+    back_button.pack(side=tk.LEFT)
 
-# Read services from a JSON file
-services_data = read_services_from_json("services")
-services = list(services_data.keys())
+    # Now assign the command to the back button
+    back_button.config(command=back_button.config(state=tk.DISABLED))
 
-# Dictionary to hold BooleanVars for each service
-service_vars = {service: tk.BooleanVar() for service in services}
+def process_selection(select, next_step):
+    if next_step == "select_model":
+        select_model(select)
+    
 
-# This is the code that makes all the tick boxes
-for service in services:
-    tk.Checkbutton(root, text=service, variable=service_vars[service]).pack()
+def select_model(make):
+    print("working as intened. I will show the selected model " + make)
 
-submit_button = tk.Button(root, text="Generate Report", command=show_sel)
-submit_button.pack()
 
+# Pulls service data, makes the variables for the tick boxes and creates the tickboxes themselves
+def select_service():
+    services_data = read_services_from_json("services")
+    services = list(services_data.keys())
+    service_vars = {service: tk.BooleanVar() for service in services}
+    for service in services:
+        tk.Checkbutton(root, text=service, variable=service_vars[service]).pack()
+
+make = select_make()
+
+
+#Generates the final report - commented out as this should be incorperated into the final select services screen
+#submit_button = tk.Button(root, text="Generate Report", command=show_sel)
+#submit_button.pack()
 root.mainloop()

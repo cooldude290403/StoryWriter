@@ -1,0 +1,44 @@
+{
+    "Canter": {
+        "Engine service": [
+            "Drained engine oil -canter",
+            "Changed sump plug washer and refitted sump plug",
+            "Changed oil filter",
+            "Filled engine with 13.7L of 10w-30",
+            "Changed fuel filter",
+            "Primed fuel sytem",
+            "Changed PCV filter"
+        ],
+        "Transmisson service": [
+            "Place holder transmisson 1",
+            "Place holder transmisson 2",
+            "Place holder transmisson 3",
+        ],
+        "Diff service": [
+            "Place holder diff 1",
+            "Place holder diff 3",
+            "Place holder diff 3",
+        ]
+    },
+    "Fighter": {
+        "Engine service": [
+            "Drained engine oil -fighter",
+            "Changed sump plug washer and refitted sump plug",
+            "Changed oil filter",
+            "Filled engine with 13.7L of 10w-30",
+            "Changed fuel filter",
+            "Primed fuel sytem",
+            "Changed PCV filter"
+        ],
+        "Transmisson service": [
+            "Place holder transmisson 1 fight",
+            "Place holder transmisson 2 fight",
+            "Place holder transmisson 3 fight",
+        ],
+        "Diff service": [
+            "Place holder diff 1 fight",
+            "Place holder diff 3 fight",
+            "Place holder diff 3 fight",
+        ]
+    }
+}
