@@ -1,95 +1,95 @@
 {
     "• Inspection Service": {
         "details": [
-            "|   - Filled washer fluid",
-            "|   - Checked Engine, transmisson and diff oil levels",
-            "|   - Checked coolant level",
-            "|   - Greased vehicle",
-            "|   - {add any issues found here}",
-            "|   - Changed service sticker and washed vehicle"
+            "└── - Filled washer fluid",
+            "└── - Checked Engine, transmisson and diff oil levels",
+            "└── - Checked coolant level",
+            "└── - Greased vehicle",
+            "└── - {add any issues found here}",
+            "└── - Changed service sticker and washed vehicle"
         ]
     },
     "• Engine Service": {
         "details": [
-            "|   - Drained engine oil",
-            "|   - Changed sump plug washer and refitted sump plug",
-            "|   - Changed oil filter",
-            "|   - Filled engine with {Oil quanity} of {Oil grade}",
-            "|   - Changed fuel filter",
-            "|   - Primed fuel sytem",
-            "|   - Changed PCV filter"
+            "└── - Drained engine oil",
+            "└── - Changed sump plug washer and refitted sump plug",
+            "└── - Changed oil filter",
+            "└── - Filled engine with {Oil quanity} of {Oil grade}",
+            "└── - Changed fuel filter",
+            "└── - Primed fuel sytem",
+            "└── - Changed PCV filter"
         ]    
     },
     "• Manual Transmisson Service": {
         "details": [
-            "|   - Removed fill plug",
-            "|   - Removed drain plug and drained oil",
-            "|   - Changed drain plug washer and reinstalled",
-            "|   - Filled transmisson with {Oil quanity} of MP80",
-            "|   - Changed fill plug washer and reinstalled"
+            "└── - Removed fill plug",
+            "└── - Removed drain plug and drained oil",
+            "└── - Changed drain plug washer and reinstalled",
+            "└── - Filled transmisson with {Oil quanity} of MP80",
+            "└── - Changed fill plug washer and reinstalled"
         ]
     },
     "• Duonic Transmisson Service": {
         "details": [
-            "|   - Removed fill plug for gear oil and ATF",
-            "|   - Removed drain plug and drained gear oil and AFT oil",
-            "|   - Removed oil pan and changed duonic filter",
-            "|   - cleaned up oil pan and installed with new gasket",
-            "|   - Changed both drain plug washers and reinstalled",
-            "|   - Filled transmisson with {Oil quanity} of MP80",
-            "|   - Filled Auto side of transmisson with 4L of Fuso DEX 3",
-            "|   - Changed both fill plug washers and reinstalled",
-            "|   - Profomed duonic relearn"
+            "└── - Removed fill plug for gear oil and ATF",
+            "└── - Removed drain plug and drained gear oil and AFT oil",
+            "└── - Removed oil pan and changed duonic filter",
+            "└── - cleaned up oil pan and installed with new gasket",
+            "└── - Changed both drain plug washers and reinstalled",
+            "└── - Filled transmisson with {Oil quanity} of MP80",
+            "└── - Filled Auto side of transmisson with 4L of Fuso DEX 3",
+            "└── - Changed both fill plug washers and reinstalled",
+            "└── - Profomed duonic relearn"
         ]
     },
     "• Front Wheel Bearings": {
         "details": [
-            "|   - Chocked rear wheels",
-            "|   - Jacked up fornt of vehicle and placed on jack stands",
-            "|   - Removed front wheels and brake calipers - ONLY FOR CANTERS",
-            "|   - Remove bearing cap, lock nut and bearing nut",
-            "|   - Removed front bearing, hub assembly and rear hub seal",
-            "|   - Removed rear wheel bearing - ONLY FOR CANTERS",
-            "|   - Cleaned old grease out of hub and both wheel bearings",
-            "|   - Packed hubs and wheel bearings with new grease",
-            "|   - Installed new rear hub seal",
-            "|   - Tighened wheel bearings in line with manufacturer specs",
-            "|   - Installed new cotter pin - ONLY FOR CANTERS",
-            "|   - Reinstalled front wheels and brake calipers",
-            "|   - Toruqed wheels to {torque spec}"
+            "└── - Chocked rear wheels",
+            "└── - Jacked up fornt of vehicle and placed on jack stands",
+            "└── - Removed front wheels and brake calipers - ONLY FOR CANTERS",
+            "└── - Remove bearing cap, lock nut and bearing nut",
+            "└── - Removed front bearing, hub assembly and rear hub seal",
+            "└── - Removed rear wheel bearing - ONLY FOR CANTERS",
+            "└── - Cleaned old grease out of hub and both wheel bearings",
+            "└── - Packed hubs and wheel bearings with new grease",
+            "└── - Installed new rear hub seal",
+            "└── - Tighened wheel bearings in line with manufacturer specs",
+            "└── - Installed new cotter pin - ONLY FOR CANTERS",
+            "└── - Reinstalled front wheels and brake calipers",
+            "└── - Toruqed wheels to {torque spec}"
         ]
     },
     "• Rear Wheel Bearings": {
         "details": [
-            "|   - Chocked front wheels",
-            "|   - Jacked up rear of vehicle and placed on jack stands",
-            "|   - Removed rear wheels and brake calipers - ONLY FOR CANTERS",
-            "|   - Removed half shaft and half shaft seal",
-            "|   - Remove bearing cap, lock nut and bearing nut",
-            "|   - Removed front bearing, hub assembly and rear hub seal",
-            "|   - Removed rear wheel bearing - ONLY FOR CANTERS",
-            "|   - Cleaned old grease out of hub and both wheel bearings",
-            "|   - Packed hubs and wheel bearings with new grease",
-            "|   - Installed new rear hub seal",
-            "|   - Tighened wheel bearings in line with manufacturer specs",
-            "|   - Reinstalled rear wheels and brake calipers",
-            "|   - Toruqed wheels to {torque spec}"
+            "└── - Chocked front wheels",
+            "└── - Jacked up rear of vehicle and placed on jack stands",
+            "└── - Removed rear wheels and brake calipers - ONLY FOR CANTERS",
+            "└── - Removed half shaft and half shaft seal",
+            "└── - Remove bearing cap, lock nut and bearing nut",
+            "└── - Removed front bearing, hub assembly and rear hub seal",
+            "└── - Removed rear wheel bearing - ONLY FOR CANTERS",
+            "└── - Cleaned old grease out of hub and both wheel bearings",
+            "└── - Packed hubs and wheel bearings with new grease",
+            "└── - Installed new rear hub seal",
+            "└── - Tighened wheel bearings in line with manufacturer specs",
+            "└── - Reinstalled rear wheels and brake calipers",
+            "└── - Toruqed wheels to {torque spec}"
         ]
     },
     "• Coolant FLush": {
         "details": [
-            "|   - Drained old coolant from radiator and block",
-            "|   - Filled engine with new {Coolant type}",
-            "|   - Ran engine to bleed sytem",
-            "|   - Drained overflow bottle",
-            "|   - Filled over fill bottle with new {coolant type}"
+            "└── - Drained old coolant from radiator and block",
+            "└── - Filled engine with new {Coolant type}",
+            "└── - Ran engine to bleed sytem",
+            "└── - Drained overflow bottle",
+            "└── - Filled over fill bottle with new {coolant type}"
         ]
     },
     "• Power Steering Fluid Change": {
         "details": [
-            "|   - Drained power steering reservoir ",
-            "|   - Changed power steering filter - FIGHTER AND ABOVE ONLY",
-            "|   - Refilled power steering reservoir , 1L of FUSO DEX 3"
+            "└── - Drained power steering reservoir ",
+            "└── - Changed power steering filter - FIGHTER AND ABOVE ONLY",
+            "└── - Refilled power steering reservoir , 1L of FUSO DEX 3"
         ]
     }
 }
